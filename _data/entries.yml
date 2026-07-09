@@ -21,7 +21,7 @@
       own number, in English and Spanish. The page’s rule system is drawn from
       the article’s own Figure 1: solid for what is said, dashed for the
       context that makes it mean anything.
-    url: /design-principles-behind-smalltalk/
+    url: /design-principles-behind-smalltalk/en/
   es:
     title: Principios de diseño detrás de Smalltalk
     eyebrow: Daniel H. H. Ingalls · BYTE Magazine, agosto de 1981
@@ -31,4 +31,4 @@
       direccionable por su número, en inglés y en castellano. El sistema de
       reglas de la página sale de la Figura 1 del propio artículo: sólida para
       lo que se dice, punteada para el contexto que lo hace significar algo.
-    url: /design-principles-behind-smalltalk/es/
+    url: /design-principles-behind-smalltalk/

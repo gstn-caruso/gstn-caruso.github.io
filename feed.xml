@@ -1,9 +1,9 @@
 ---
 layout: feed
-lang: en
+lang: es
 home: /
 permalink: /feed.xml
 description: >-
-  Gastón Caruso — on Smalltalk and object design. No trackers, no analytics:
-  the site doesNotUnderstand: #you.
+  Gastón Caruso — sobre Smalltalk y el diseño de objetos. Sin rastreadores ni
+  analíticas: el sitio doesNotUnderstand: #vos.
 ---

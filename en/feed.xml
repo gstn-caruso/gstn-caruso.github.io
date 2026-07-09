@@ -1,0 +1,9 @@
+---
+layout: feed
+lang: en
+home: /en/
+permalink: /en/feed.xml
+description: >-
+  Gastón Caruso — on Smalltalk and object design. No trackers, no analytics:
+  the site doesNotUnderstand: #you.
+---

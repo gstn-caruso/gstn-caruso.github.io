@@ -3,8 +3,8 @@
 A blog. Every entry is a reading page and nothing else: no trackers, no
 analytics, eight lines of JavaScript, and one stylesheet.
 
-Read it in **[English](https://gstn-caruso.github.io/)** or in
-**[castellano](https://gstn-caruso.github.io/es/)**.
+Read it in **[castellano](https://gstn-caruso.github.io/)** or in
+**[English](https://gstn-caruso.github.io/en/)**.
 
 ## How it is put together
 
@@ -14,9 +14,9 @@ to keep current — the workflow uses `actions/jekyll-build-pages`, which brings
 its own Jekyll.
 
 ```
-index.md               the index, in English  →  /
-es/index.md            the index, in Spanish  →  /es/
-feed.xml, es/feed.xml  one Atom feed per language
+index.md               the index, in Spanish  →  /
+en/index.md            the index, in English  →  /en/
+feed.xml, en/feed.xml  one Atom feed per language
 
 _data/entries.yml      every entry, in both languages
 _data/strings.yml      the chrome: nav labels, colophon, skip link
@@ -24,8 +24,12 @@ _data/strings.yml      the chrome: nav labels, colophon, skip link
 _layouts/house.html    <head>, the skip link, the colophon, the language script
 _layouts/index.html    the list of entries
 _layouts/article.html  an entry written here
+_layouts/dpbs.html     the Ingalls mirror, which brings its own stylesheet
 _layouts/feed.xml      both feeds
 _includes/lang-nav.html
+
+design-principles-behind-smalltalk/
+                       the mirror itself  →  /design-principles-behind-smalltalk/
 
 assets/css/house.css   the whole design
 assets/fonts/          Charis, subset
@@ -33,8 +37,8 @@ tools/                 where assets/fonts/ comes from, and what guards it
 ```
 
 This is a *user site*, so it is served from the root and has no `baseurl`. The
-project pages under the same account — the Smalltalk mirror among them — keep
-their own, and are untouched by any of this.
+project pages under the same account keep their own, and are untouched by any
+of this.
 
 ## The design
 

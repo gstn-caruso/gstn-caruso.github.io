@@ -1,14 +1,14 @@
 title: Gastón Caruso
 description: >-
-  On Smalltalk and object design, in English and Spanish. No trackers, no
-  analytics: the site doesNotUnderstand: #you.
+  Sobre Smalltalk y el diseño de objetos, en castellano y en inglés. Sin
+  rastreadores ni analíticas: el sitio doesNotUnderstand: #vos.
 author: Gastón Caruso
 url: https://gstn-caruso.github.io
 repo: https://github.com/gstn-caruso/gstn-caruso.github.io
 
 # A user site is served from the root, so there is no baseurl and a link
-# written /assets/… reaches assets. Project pages under this account — the
-# Smalltalk mirror among them — keep their own baseurl and are untouched.
+# written /assets/… reaches assets. Project pages under this account keep their
+# own baseurl and are untouched.
 baseurl: ""
 
 markdown: kramdown

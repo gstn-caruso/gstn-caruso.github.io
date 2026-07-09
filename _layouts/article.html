@@ -2,7 +2,7 @@
 layout: house
 ---
 {%- assign chrome = site.data.strings[page.lang] -%}
-{%- if page.lang == 'es' -%}{%- assign home = '/es/' -%}{%- else -%}{%- assign home = '/' -%}{%- endif -%}
+{%- if page.lang == 'en' -%}{%- assign home = '/en/' -%}{%- else -%}{%- assign home = '/' -%}{%- endif -%}
 
   <a class="back" href="{{ home | relative_url }}">&#8592; {{ chrome.back }}</a>
 

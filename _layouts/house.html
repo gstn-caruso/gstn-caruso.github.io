@@ -4,8 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {%- assign chrome = site.data.strings[page.lang] -%}
-{%- if page.lang == 'es' -%}
-  {%- assign feed = '/es/feed.xml' -%}
+{%- comment -%}
+  Spanish is what this site speaks. It sits at the root, and English is the
+  translation, at /en/. So x-default — the page a search engine offers a reader
+  whose language it cannot guess — is always the Spanish one.
+{%- endcomment -%}
+{%- if page.lang == 'en' -%}
+  {%- assign feed = '/en/feed.xml' -%}
   {%- assign x_default = page.translation.url -%}
 {%- else -%}
   {%- assign feed = '/feed.xml' -%}

@@ -1,17 +1,18 @@
 ---
 layout: index
-lang: en
+lang: es
 is_home: true
 permalink: /
 title: Gastón Caruso
-eyebrow: Writing
+eyebrow: Escritos
 standfirst: >-
-  On Smalltalk, objects, and the design of systems small enough to understand.
+  Sobre Smalltalk, objetos y el diseño de sistemas lo bastante chicos como para
+  entenderlos.
 description: >-
-  Gastón Caruso — on Smalltalk and object design. No trackers, no analytics:
-  the site doesNotUnderstand: #you.
+  Gastón Caruso — sobre Smalltalk y el diseño de objetos. Sin rastreadores ni
+  analíticas: el sitio doesNotUnderstand: #vos.
 translation:
-  url: /es/
-  label: Español
-  hreflang: es
+  url: /en/
+  label: English
+  hreflang: en
 ---

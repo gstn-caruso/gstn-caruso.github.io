@@ -9,6 +9,9 @@
   These were '/' and '/es/' while the article was a repository of its own, and
   a baseurl carried them the rest of the way. Here the baseurl is empty and the
   article is one page among several, so each alternate has to name itself.
+
+  x-default is the Spanish one: the site speaks Spanish, and English is the
+  translation.
 {%- endcomment -%}
 {%- if page.lang == 'es' -%}
   {%- assign en_url = page.translation.url -%}
@@ -20,7 +23,7 @@
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 <link rel="alternate" hreflang="en" href="{{ en_url | absolute_url }}">
 <link rel="alternate" hreflang="es" href="{{ es_url | absolute_url }}">
-<link rel="alternate" hreflang="x-default" href="{{ en_url | absolute_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ es_url | absolute_url }}">
 <link rel="preload" as="font" type="font/woff2" href="{{ '/assets/fonts/charis-400.woff2' | relative_url }}" crossorigin>
 <style>
 /* ===============================================================
