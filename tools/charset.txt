@@ -1,0 +1,56 @@
+# The characters the fonts carry.
+#
+# DPBS subset its fonts to the 118 characters that one article happened to
+# use. A blog cannot do that: the next post brings characters the last one
+# never needed, and a missing glyph falls back to a system serif silently,
+# mid-word. So the subset is fixed to a set wide enough to write in, and it
+# is regenerated only when a language arrives that needs more.
+#
+# Read by tools/subset-fonts.sh. Everything after # is a comment. Ranges are
+# written U+0020-007E: pyftsubset strips every U and + before it parses, so a
+# second U+ after the dash would break the range in half.
+
+U+0020-007E     # ASCII, printable
+U+00A0          # no-break space
+
+# Latin-1 symbols worth keeping
+U+00A1          # ¡
+U+00A9          # ©
+U+00AB U+00BB   # « »
+U+00B0          # °
+U+00B7          # ·   the separator in an eyebrow
+U+00BF          # ¿
+U+00AA U+00BA   # ª º
+U+00D7 U+00F7   # × ÷
+
+# Latin-1 letters: Spanish, and every other language that fits in Latin-1
+U+00C0-00FF
+
+# The rest of Western Europe
+U+0152-0153     # Œ œ
+U+0160-0161     # Š š
+U+0178          # Ÿ
+U+017D-017E     # Ž ž
+
+# Typographic punctuation — what kramdown emits, plus what prose wants
+U+2009          # thin space
+U+2010-2011     # hyphen, non-breaking hyphen
+U+2013-2014     # – —
+U+2018-201E     # ‘ ’ ‚ ‛ “ ” „
+U+2020-2021     # † ‡
+U+2022          # •
+U+2026          # …
+U+2030          # ‰
+U+2032-2033     # ′ ″
+U+2039-203A     # ‹ ›
+U+202F          # narrow no-break space
+
+# Marks the page draws with
+U+2190-2193     # ← ↑ → ↓
+U+2197          # ↗   an entry that lives somewhere else
+U+2122          # ™
+U+20AC          # €
+U+2212          # −   the real minus, not a hyphen
+U+2248          # ≈
+U+2260          # ≠
+U+2264-2265     # ≤ ≥
