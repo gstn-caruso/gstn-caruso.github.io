@@ -16,7 +16,8 @@
   {%- assign feed = '/feed.xml' -%}
   {%- assign x_default = page.url -%}
 {%- endif -%}
-{%- assign description = page.description | default: site.description %}
+{%- assign description = page.description | default: site.description -%}
+{%- assign issue = site.repo | append: '/issues/new' %}
 {%- comment -%}
   A home page is titled with its own name, and both of them are called Gastón
   Caruso. In a tab, a bookmark or a search result the two languages were the
@@ -53,6 +54,7 @@
   <footer class="colophon">
     <p><a href="{{ feed | relative_url }}">{{ chrome.feed }}</a> &middot; <a href="{{ site.repo }}">{{ chrome.source }}</a></p>
     <p>{{ chrome.colophon }}</p>
+    <p>{{ chrome.contribute | replace: '%issue%', issue }}</p>
   </footer>
 
 </div>

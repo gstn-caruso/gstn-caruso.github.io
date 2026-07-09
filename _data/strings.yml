@@ -1,5 +1,11 @@
 # The chrome, in each language. The words of a page live in that page's front
 # matter; only the furniture lives here.
+#
+# A sentence is the unit a translator works on, so each one stays whole here
+# rather than being assembled from fragments in a layout. Where a sentence needs
+# an address the layout knows and this file does not, it writes %issue% and the
+# layout fills it in — the repository is named once, in _config.yml. No braces:
+# a `}` inside a Liquid tag ends the tag early.
 
 en:
   nav_label: Language
@@ -12,6 +18,9 @@ en:
     Set in <a href="https://software.sil.org/charis/">Charis</a> by SIL Global,
     used under the <a href="/assets/fonts/OFL.txt">SIL Open Font License 1.1</a>.
     No trackers, no analytics.
+  contribute: >-
+    Every contribution is welcome: a translation improved, a mistaken concept
+    set right. Open an <a href="%issue%">issue</a>.
 
 es:
   nav_label: Idioma
@@ -24,3 +33,6 @@ es:
     Compuesto en <a href="https://software.sil.org/charis/">Charis</a>, de SIL
     Global, bajo la <a href="/assets/fonts/OFL.txt">SIL Open Font License 1.1</a>.
     Sin rastreadores ni analíticas.
+  contribute: >-
+    Toda contribución es bienvenida: mejorar una traducción, aclarar un concepto
+    errado. Abrí un <a href="%issue%">issue</a>.
