@@ -46,7 +46,7 @@
 {{ content }}
 
   <footer class="colophon">
-    <p>&copy; {{ 'now' | date: '%Y' }} {{ site.author }}. <a href="{{ feed | relative_url }}">{{ chrome.feed }}</a> &middot; <a href="{{ site.repo }}">{{ chrome.source }}</a></p>
+    <p><a href="{{ feed | relative_url }}">{{ chrome.feed }}</a> &middot; <a href="{{ site.repo }}">{{ chrome.source }}</a></p>
     <p>{{ chrome.colophon }}</p>
   </footer>
 
