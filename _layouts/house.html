@@ -12,7 +12,12 @@
   {%- assign x_default = page.url -%}
 {%- endif -%}
 {%- assign description = page.description | default: site.description %}
-<title>{{ page.title }}{% unless page.is_home %} — {{ site.title }}{% endunless %}</title>
+{%- comment -%}
+  A home page is titled with its own name, and both of them are called Gastón
+  Caruso. In a tab, a bookmark or a search result the two languages were the
+  same page. The eyebrow already names what each one is; it says so again here.
+{%- endcomment -%}
+<title>{{ page.title }} — {% if page.is_home %}{{ page.eyebrow }}{% else %}{{ site.title }}{% endif %}</title>
 <meta name="description" content="{{ description }}">
 
 <link rel="canonical" href="{{ page.url | absolute_url }}">

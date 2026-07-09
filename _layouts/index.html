@@ -10,8 +10,13 @@ layout: house
     {% include lang-nav.html %}
   </header>
 
-  <main id="main">
-    <ol class="entries">
+  <main id="main" tabindex="-1">
+    {%- comment -%}
+      role="list" survives `list-style: none`. Safari drops the list role from a
+      styled-bare list, and VoiceOver then never says how many entries there
+      are — the one thing the list was for.
+    {%- endcomment -%}
+    <ol class="entries" role="list">
       {%- assign entries = site.data.entries | sort: 'date' | reverse -%}
       {%- assign running_year = '' -%}
       {%- for entry in entries -%}

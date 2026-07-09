@@ -72,8 +72,8 @@
   --paper:       #f4f4f1;
   --ink:         #191b1f;
   --ink-soft:    #565a61;
-  --ink-faint:   #8b9096;
-  --rule:        #c6c7c1;
+  --ink-faint:   #6b7076;
+  --rule:        #8c8d87;
   --accent:      #2c5aa0;   /* the Blue Book */
   --accent-tint: #e6edf7;
   --code-bg:     #e6e6e1;
@@ -98,8 +98,8 @@
     --paper:       #101215;
     --ink:         #e3e5e1;
     --ink-soft:    #979da4;
-    --ink-faint:   #6a7077;
-    --rule:        #2f333a;
+    --ink-faint:   #777d84;
+    --rule:        #5d6168;
     --accent:      #8fb3e8;
     --accent-tint: #1a2434;
     --code-bg:     #1c1f25;
@@ -215,8 +215,11 @@ a { color: var(--accent); text-underline-offset: 0.16em; text-decoration-thickne
 }
 .lang-current { color: var(--ink-soft); }
 .lang-sep { color: var(--rule); margin: 0 0.55em; }
-.lang-alt { color: var(--accent); text-decoration: none; }
-.lang-alt:hover, .lang-alt:focus-visible { text-decoration: underline; }
+/* Underlined, always. EN and ES sit at the same luminance — 1.02:1 apart — so
+   hue is the only thing telling the link from the word beside it, and hue is
+   the one thing a red-green colourblind reader, or a sunlit screen, does not
+   deliver. No better blue exists at this lightness. The line does the work. */
+.lang-alt { color: var(--accent); }
 
 /* --- contents: implicit, therefore dashed --------------------- */
 
@@ -507,7 +510,7 @@ figcaption b { color: var(--ink); font-weight: 700; }
     <p class="byline"><b>{{ page.author }}</b></p>
     <p class="affiliation">{{ page.affiliation_lines | join: '<br>' }}</p>
     <nav class="lang" aria-label="{{ page.lang_nav_label }}">
-      <span class="lang-current" aria-current="page">{{ page.lang | upcase }}</span><span class="lang-sep">·</span><a class="lang-alt" href="{{ page.translation.url | relative_url }}" hreflang="{{ page.translation.hreflang }}" lang="{{ page.translation.hreflang }}" title="{{ page.translation.label }}">{{ page.translation.hreflang | upcase }}</a>
+      <span class="lang-current" aria-current="page">{{ page.lang | upcase }}</span><span class="lang-sep" aria-hidden="true">·</span><a class="lang-alt" href="{{ page.translation.url | relative_url }}" hreflang="{{ page.translation.hreflang }}" lang="{{ page.translation.hreflang }}" title="{{ page.translation.label }}">{{ page.translation.hreflang | upcase }}</a>
     </nav>
   </header>
 
@@ -515,7 +518,12 @@ figcaption b { color: var(--ink); font-weight: 700; }
   <nav class="contents" aria-labelledby="contents-heading">
     <details id="contents" open>
       <summary id="contents-heading">{{ page.index_heading }}</summary>
-      <ol>
+      {%- comment -%}
+        role="list" survives `list-style: none`. Safari drops the list role from
+        a styled-bare list, and VoiceOver then never counts the principles —
+        which is the whole promise of this index.
+      {%- endcomment -%}
+      <ol role="list">
         {%- for p in page.principles %}
         <li><a href="#p{{ forloop.index }}"><span class="n">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span><span class="t">{{ p }}</span></a></li>
         {%- endfor %}
@@ -524,7 +532,7 @@ figcaption b { color: var(--ink); font-weight: 700; }
   </nav>
   {% endif %}
 
-  <main class="prose" id="article">
+  <main class="prose" id="article" tabindex="-1">
     {{ content }}
   </main>
 

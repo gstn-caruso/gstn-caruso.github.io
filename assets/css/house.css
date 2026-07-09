@@ -55,8 +55,8 @@
   --paper:       #f4f4f1;
   --ink:         #191b1f;
   --ink-soft:    #565a61;
-  --ink-faint:   #8b9096;
-  --rule:        #c6c7c1;
+  --ink-faint:   #6b7076;
+  --rule:        #8c8d87;
   --accent:      #2c5aa0;   /* the Blue Book */
   --accent-tint: #e6edf7;
   --code-bg:     #e6e6e1;
@@ -82,8 +82,8 @@
     --paper:       #101215;
     --ink:         #e3e5e1;
     --ink-soft:    #979da4;
-    --ink-faint:   #6a7077;
-    --rule:        #2f333a;
+    --ink-faint:   #777d84;
+    --rule:        #5d6168;
     --accent:      #8fb3e8;
     --accent-tint: #1a2434;
     --code-bg:     #1c1f25;
@@ -199,8 +199,11 @@ a { color: var(--accent); text-underline-offset: 0.16em; text-decoration-thickne
 }
 .lang-current { color: var(--ink-soft); }
 .lang-sep { color: var(--rule); margin: 0 0.55em; }
-.lang-alt { color: var(--accent); text-decoration: none; }
-.lang-alt:hover, .lang-alt:focus-visible { text-decoration: underline; }
+/* Underlined, always. EN and ES sit at the same luminance — 1.02:1 apart — so
+   hue is the only thing telling the link from the word beside it, and hue is
+   the one thing a red-green colourblind reader, or a sunlit screen, does not
+   deliver. No better blue exists at this lightness. The line does the work. */
+.lang-alt { color: var(--accent); }
 
 /* --- the entries: solid, therefore explicit -------------------- */
 

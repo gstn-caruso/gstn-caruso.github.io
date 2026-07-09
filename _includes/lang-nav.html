@@ -1,4 +1,4 @@
 {%- assign chrome = site.data.strings[page.lang] -%}
 <nav class="lang" aria-label="{{ chrome.nav_label }}">
-  <span class="lang-current" aria-current="page">{{ page.lang | upcase }}</span><span class="lang-sep">&middot;</span><a class="lang-alt" href="{{ page.translation.url | relative_url }}" hreflang="{{ page.translation.hreflang }}" lang="{{ page.translation.hreflang }}" title="{{ page.translation.label }}">{{ page.translation.hreflang | upcase }}</a>
+  <span class="lang-current" aria-current="page">{{ page.lang | upcase }}</span><span class="lang-sep" aria-hidden="true">&middot;</span><a class="lang-alt" href="{{ page.translation.url | relative_url }}" hreflang="{{ page.translation.hreflang }}" lang="{{ page.translation.hreflang }}" title="{{ page.translation.label }}">{{ page.translation.hreflang | upcase }}</a>
 </nav>
