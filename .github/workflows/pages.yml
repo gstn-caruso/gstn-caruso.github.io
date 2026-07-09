@@ -37,6 +37,12 @@ jobs:
           pip install --quiet 'fonttools[woff]'
           python3 tools/check-charset.py _site
 
+      # A grey that reads on the laptop it was chosen on is a grey that vanishes
+      # in sunlight. WCAG puts a number on it; the number is checked, not
+      # trusted. Reads the sources, so it needs no build and no dependency.
+      - name: Every colour clears its contrast
+        run: python3 tools/check-contrast.py
+
       - uses: actions/upload-pages-artifact@v5
 
   deploy:
