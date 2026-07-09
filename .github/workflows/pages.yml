@@ -1,0 +1,50 @@
+name: Deploy site
+
+# actions/jekyll-build-pages brings its own Jekyll, so there is no Gemfile here
+# to keep current. Building it ourselves — rather than letting Pages guess —
+# also means the repo never has to argue with GitHub about whether it is a
+# Jekyll site or a pile of static files.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/configure-pages@v6
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      # A character the subset does not carry is set in a system serif, in the
+      # middle of a word, and nobody ever notices. Notice here instead.
+      - name: Every character is in the font
+        run: |
+          pip install --quiet 'fonttools[woff]'
+          python3 tools/check-charset.py _site
+
+      - uses: actions/upload-pages-artifact@v5
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
