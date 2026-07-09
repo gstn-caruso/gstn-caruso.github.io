@@ -1,0 +1,34 @@
+# Every entry on this site, newest last — the index sorts by date.
+#
+# An entry is a reading page. Some are written here; some, like the first one,
+# live in a repository of their own and are linked to. `away: true` marks those,
+# and the index draws them with an arrow. The URL is the only difference: the
+# index does not otherwise care where an entry sleeps.
+#
+# To add an entry written here, drop a page under its own directory with
+# `layout: article`, then name it below. To add one that lives elsewhere, name
+# it below and nothing more.
+
+- id: design-principles-behind-smalltalk
+  date: 2026-07-09
+  away: true
+  en:
+    title: Design Principles Behind Smalltalk
+    eyebrow: Daniel H. H. Ingalls · BYTE Magazine, August 1981
+    blurb: >-
+      Ingalls’ article, mirrored as a static page that asks nothing of the
+      reader but a browser. Seventeen principles, each one addressable by its
+      own number, in English and Spanish. The page’s rule system is drawn from
+      the article’s own Figure 1: solid for what is said, dashed for the
+      context that makes it mean anything.
+    url: https://gstn-caruso.github.io/design-principles-behind-smalltalk/
+  es:
+    title: Principios de diseño detrás de Smalltalk
+    eyebrow: Daniel H. H. Ingalls · BYTE Magazine, agosto de 1981
+    blurb: >-
+      El artículo de Ingalls, espejado como una página estática que no le pide
+      al lector más que un navegador. Diecisiete principios, cada uno
+      direccionable por su número, en inglés y en castellano. El sistema de
+      reglas de la página sale de la Figura 1 del propio artículo: sólida para
+      lo que se dice, punteada para el contexto que lo hace significar algo.
+    url: https://gstn-caruso.github.io/design-principles-behind-smalltalk/es/

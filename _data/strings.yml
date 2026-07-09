@@ -1,0 +1,26 @@
+# The chrome, in each language. The words of a page live in that page's front
+# matter; only the furniture lives here.
+
+en:
+  nav_label: Language
+  skip: Skip to the content
+  back: All entries
+  away: opens on another site
+  feed: Feed
+  source: Source
+  colophon: >-
+    Set in <a href="https://software.sil.org/charis/">Charis</a> by SIL Global,
+    used under the <a href="/assets/fonts/OFL.txt">SIL Open Font License 1.1</a>.
+    No trackers, no analytics.
+
+es:
+  nav_label: Idioma
+  skip: Ir al contenido
+  back: Todas las entradas
+  away: se abre en otro sitio
+  feed: Feed
+  source: Código
+  colophon: >-
+    Compuesto en <a href="https://software.sil.org/charis/">Charis</a>, de SIL
+    Global, bajo la <a href="/assets/fonts/OFL.txt">SIL Open Font License 1.1</a>.
+    Sin rastreadores ni analíticas.
